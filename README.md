@@ -1,11 +1,6 @@
-## My Project
+## Amazon Detective Administration Guide
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+The open source version of the Amazon Detective Administration Guide. To provide feedback or request changes, you can submit a pull request that contains your proposed changes.
 
 ## License Summary
 
