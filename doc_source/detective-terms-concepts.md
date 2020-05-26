@@ -30,7 +30,9 @@ The master account invites member accounts to contribute their data to the behav
 
 ****Member account****  
 An AWS account that a master account invited to contribute data to a behavior graph\.  
-Member accounts can respond to the behavior graph invitation and remove their account from the behavior graph\. They have no other access to the behavior graph\.
+Member accounts can respond to the behavior graph invitation and remove their account from the behavior graph\.  
+They can also view usage information for their account across the behavior graphs that they contribute data to\.  
+They have no other access to the behavior graph\.
 
 ****Profile****  
 For a finding or an entity, a single page that provides a collection of data visualizations plus supporting guidance\.  

@@ -18,6 +18,8 @@ Detective ingests data from these types of AWS logs:
 + Amazon Virtual Private Cloud \(Amazon VPC\) flow logs 
 + For accounts that are enrolled in GuardDuty, Detective also ingests GuardDuty findings\.
 
+Detective consumes CloudTrail and VPC flow log events using independent and duplicative streams of CloudTrail and VPC flow logs\. These processes do not affect or use your existing CloudTrail and VPC flow log configurations\. They also do not affect the performance of or increase your costs for these services\.
+
 ## How Detective ingests and stores source data<a name="source-data-storage"></a>
 
 When Detective is enabled, Detective begins ingesting source data from the behavior graph master account\. As member accounts are added to the behavior graph, Detective also begins using the data from those member accounts\.
