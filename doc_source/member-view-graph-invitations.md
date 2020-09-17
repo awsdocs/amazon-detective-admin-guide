@@ -8,7 +8,7 @@ You can view behavior graph invitations from the AWS Management Console\.
 
 **To view behavior graph invitations \(console\)**
 
-1. Sign in to the AWS Management Console, then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
+1. Sign in to the AWS Management Console\. Then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
 
 1. In the Detective navigation pane, choose **Account management**\.
 

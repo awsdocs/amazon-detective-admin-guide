@@ -27,7 +27,7 @@ You can use the AWS Management Console to see and filter a list of accounts in y
 
 **To display the list of accounts in the behavior graph \(console\)**
 
-1. Sign in to the AWS Management Console, then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
+1. Sign in to the AWS Management Console\. Then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
 
 1. In the Detective navigation pane, choose **Account management**\.
 

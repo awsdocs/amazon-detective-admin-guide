@@ -20,7 +20,7 @@ You can enable Amazon Detective from the AWS Management Console\.
 
 **To enable Detective \(console\)**
 
-1. Sign in to the AWS Management Console, then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
+1. Sign in to the AWS Management Console\. Then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
 
 1. Choose **Get started**\.
 

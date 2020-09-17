@@ -52,7 +52,9 @@ The `AmazonDetectiveFullAccess` managed policy shown below contains the permissi
             "Action": [
                 "detective:CreateMembers",
                 "detective:DeleteMembers",
-                "detective:AcceptInvitation"
+                "detective:AcceptInvitation",
+                "guardduty:ArchiveFindings",
+                "guardduty:ListDetectors"
             ],
             "Resource": "*"
         }

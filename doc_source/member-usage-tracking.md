@@ -6,7 +6,7 @@ For member accounts, the **Usage** page shows the volume of data and projected 3
 
 **To view Detective usage information**
 
-1. Sign in to the AWS Management Console, then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
+1. Sign in to the AWS Management Console\. Then open the Detective console at [https://console\.aws\.amazon\.com/detective/](https://console.aws.amazon.com/detective/)\.
 
 1. In the Detective navigation pane, under **Settings**, choose **Usage**\.
 

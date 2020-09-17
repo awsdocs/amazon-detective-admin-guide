@@ -11,6 +11,8 @@ For data protection purposes, we recommend that you protect AWS account credenti
 
 We strongly recommend that you never put sensitive identifying information, such as your customers' account numbers, into free\-form fields such as a **Name** field\. This includes when you work with Detective or other AWS services using the console, API, AWS CLI, or AWS SDKs\. Any data that you enter into Detective or other services might get picked up for inclusion in diagnostic logs\. When you provide a URL to an external server, don't include credentials information in the URL to validate your request to that server\.
 
+Detective encrypts all data that it processes and stores at rest and in transit\.
+
 For more information about data protection, see the [AWS Shared Responsibility Model and GDPR](http://aws.amazon.com/blogs/security/the-aws-shared-responsibility-model-and-gdpr/) blog post on the *AWS Security Blog*\.
 
 **Topics**

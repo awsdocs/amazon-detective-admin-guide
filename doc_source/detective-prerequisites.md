@@ -18,6 +18,7 @@ You also need to be aware of the following requirements and recommendations\.
 + [Account data volume must be within the Detective quota](#prereq-data-volume-quota)
 + [Recommended alignment with GuardDuty and AWS Security Hub](#recommended-service-alignment)
 + [Required IAM policy for Detective](#detective-setup-add-iam-policy)
++ [Enabling the display of account names](#detective-enable-account-name-display)
 + [Recommended update to the GuardDuty CloudWatch notification frequency](#recommended-guardduty-config)
 
 ## Supported AWS Command Line Interface version<a name="aws-cli-version"></a>
@@ -71,13 +72,27 @@ This policy allows you to perform all master account actions in Detective\.
         "detective:ListGraphs",
         "detective:ListMembers",
         "detective:SearchGraph",
-        "detective:StartMonitoringMember"
+        "detective:StartMonitoringMember",
+        "guardduty:ArchiveFindings",
+        "guardduty:ListDetectors"
       ],
       "Resource": "*"
     }
   ]
 }
 ```
+
+## Enabling the display of account names<a name="detective-enable-account-name-display"></a>
+
+By default, the Detective console displays AWS account IDs\.
+
+If your account belongs to an organization in AWS Organizations, then Detective can also display account names\. Detective retrieves the account names from Organizations\.
+
+To have Detective display account names, your account must belong to the organization\.
+
+You also must have the following permissions:
++ `organizations:ListAccounts`
++ `organizations:DescribeOrganization`
 
 ## Recommended update to the GuardDuty CloudWatch notification frequency<a name="recommended-guardduty-config"></a>
 

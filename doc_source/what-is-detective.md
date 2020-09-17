@@ -2,11 +2,11 @@
 
 Amazon Detective makes it easy to analyze, investigate, and quickly identify the root cause of security findings or suspicious activities\. Detective automatically collects log data from your AWS resources\. It then uses machine learning, statistical analysis, and graph theory to help you visualize and conduct faster and more efficient security investigations\.
 
-The Detective prebuilt data aggregations, summaries, and context help you to quickly analyze and determine the nature and extent of possible security issues\. Detective maintains up to a year of historical event data\. This data is easily available through a set of visualizations that shows changes in the type and volume of activity over a selected time window\. For customers who have Amazon GuardDuty enabled, Detective also links those changes to GuardDuty findings\.
+The Detective prebuilt data aggregations, summaries, and context help you to quickly analyze and determine the nature and extent of possible security issues\. Detective maintains up to a year of historical event data\. This data is easily available through a set of visualizations that shows changes in the type and volume of activity over a selected time window\. Detective links those changes to GuardDuty findings\.
 
 ## How does Detective work?<a name="detective-how-works"></a>
 
-Detective automatically extracts time\-based events such as login attempts, API calls, and network traffic from AWS CloudTrail and Amazon VPC flow logs\. For customers who have GuardDuty enabled, it also ingests findings detected by GuardDuty\.
+Detective automatically extracts time\-based events such as login attempts, API calls, and network traffic from AWS CloudTrail and Amazon VPC flow logs\. It also ingests findings detected by GuardDuty\.
 
 From those events, Detective uses machine learning and visualization to create a unified, interactive view of your resource behaviors and the interactions between them over time\. You can explore this behavior graph to examine disparate actions such as failed logon attempts or suspicious API calls\. You can also see how these actions affect resources such as AWS accounts and Amazon EC2 instances\. You can adjust the behavior graph's scope and timeline for a variety of tasks:
 + Rapidly investigate any activity that falls outside the norm\.
@@ -25,6 +25,6 @@ For information about how Detective uses source data from behavior graph account
 
 For information on how master accounts manage behavior graphs, see [For master accounts: Managing the accounts in your behavior graph](master-account-graph-management.md)\. For information on how member accounts manage their behavior graph invitations and memberships, see [For member accounts: Managing behavior graph invitations and memberships](member-account-graph-management.md)\.
 
-The master account uses the analytics and visualizations generated from the behavior graph to investigate AWS resources and GuardDuty findings\. The Detective integration with GuardDuty and AWS Security Hub allows you to pivot from a GuardDuty finding in these services directly into the Detective console\.
+The master account uses the analytics and visualizations generated from the behavior graph to investigate AWS resources and GuardDuty findings\. The Detective integrations with GuardDuty and AWS Security Hub allow you to pivot from a GuardDuty finding in these services directly into the Detective console\.
 
 A Detective investigation focuses on the activity that is connected to the involved AWS resources\. For an overview of the investigation process in Detective, see [How Amazon Detective is used for investigation](https://docs.aws.amazon.com/detective/latest/userguide/detective-investigation-about.html) in *Detective User Guide*\.
