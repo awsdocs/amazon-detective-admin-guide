@@ -1,6 +1,6 @@
 # Inviting member accounts to a behavior graph<a name="graph-master-add-member-accounts"></a>
 
-The master account can invite up to 1000 member accounts to contribute to a behavior graph\.
+The master account can invite up to 1,200 member accounts to contribute to a behavior graph\.
 
 At a high level, the process for inviting members to contribute to a behavior graph is as follows\.
 

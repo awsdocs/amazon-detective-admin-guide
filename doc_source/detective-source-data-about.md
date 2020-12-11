@@ -30,16 +30,18 @@ The Detective ingest process feeds data into Amazon Simple Storage Service \(Ama
 
 ## How Detective enforces the data volume quota for behavior graphs<a name="data-volume-enforcement"></a>
 
-Detective has a strict quota on the volume of data it allows in each behavior graph\. The data volume is the amount of data per day that flows into the Detective behavior graph\.
+Detective has strict quotas on the volume of data it allows in each behavior graph\. The data volume is the amount of data per day that flows into the Detective behavior graph\.
 
-Detective enforces this quota when a master account enables Detective, and when a member account accepts an invitation to contribute to a behavior graph\.
-+ If the data volume for a master account exceeds the quota, then the master account cannot enable Detective\.
-+ If the added data volume from a member account would cause the behavior graph to exceed the quota, the member account cannot be enabled\.
+Detective enforces these quotas when a master account enables Detective, and when a member account accepts an invitation to contribute to a behavior graph\.
++ If the data volume for a master account exceeds 2\.4 TB per day, then the master account cannot enable Detective\.
++ If the added data volume from a member account would cause the behavior graph to exceed 2\.4 TB per day, the member account cannot be enabled\.
 
 The data volume for a behavior graph also can grow naturally over time\. Detective checks the behavior graph data volume each day to make sure that it does not exceed the quota\.
 
 If the behavior graph data volume is approaching the quota, Detective displays a warning message on the console\. To avoid exceeding the quota, you can remove member accounts\.
 
-If the behavior graph data volume exceeds the quota, then Detective disables the behavior graph\. When the behavior graph is disabled, no new data is ingested into it\. You can still view the existing behavior graph data\. The console displays a message to indicate that the behavior graph is disabled\.
+If the behavior graph data volume exceeds 1\.9 TB per day, then you cannot add a new member account to the behavior graph\.
 
-If your behavior graph is disabled, you must work with AWS Support to get it re\-enabled\. If possible, before you contact AWS Support, try to remove member accounts to get the data volume below the quota\. This makes it easier to re\-enable the behavior graph\.
+If the behavior graph data volume exceeds 2\.4 TB per day, then Detective stops ingesting data into the behavior graph\. No new data is ingested into the behavior graph, but existing data is not removed\. You can still use that historical data for investigation\. The console displays a message to indicate that the data ingest is suspended for the behavior graph\.
+
+If the data ingest is suspended, you must work with AWS Support to get it re\-enabled\. If possible, before you contact AWS Support, try to remove member accounts to get the data volume below the quota\. This makes it easier to re\-enable the data ingest for the behavior graph\.

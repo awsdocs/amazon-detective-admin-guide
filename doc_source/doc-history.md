@@ -5,6 +5,8 @@ The following table provides a history of the updates to this guide\.
 
 |  Change  |  Description  |  Date  | 
 | --- | --- | --- | 
+| [Added values for behavior graph data volume quotas](https://docs.aws.amazon.com/detective/latest/adminguide/regions-limitations.html#quotas) | Added the specific quota values for behavior graph data volume quotas\. | December 11, 2020 | 
+|  Member account quota increased to 1,200  |  Master accounts can now invite up to 1,200 member accounts to their behavior graph\. Previously the quota was 1,000\.  |  December 11, 2020  | 
 |  Member accounts can now see their usage and projected cost  |  Member accounts can now view their own usage information\. For member accounts, the **Usage** page shows the amount of data ingested into each behavior graph that they contribute to\. Member accounts can also see their projected 30\-day cost\.  |  May 26, 2020  | 
 |  Free trial is now per account instead of per behavior graph  |  Each account Amazon Detective now receives a separate free trial within each Region\. The free trial starts either when the account enables Detective, or the first time the account is enabled as a member account\.  |  May 26, 2020  | 
 |  Amazon Detective general availability release  |  Detective is now generally available\.  |  March 31, 2020  | 

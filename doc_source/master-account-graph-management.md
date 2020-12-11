@@ -1,6 +1,6 @@
 # For master accounts: Managing the accounts in your behavior graph<a name="master-account-graph-management"></a>
 
-A master account can invite 1,000 other accounts to be member accounts in the behavior graph\. See [Inviting member accounts to a behavior graph](graph-master-add-member-accounts.md)\. When a member account accepts the invitation and is enabled, Amazon Detective begins to ingest and extract the member account's data into that behavior graph\.
+A master account can invite 1,200 other accounts to be member accounts in the behavior graph\. See [Inviting member accounts to a behavior graph](graph-master-add-member-accounts.md)\. When a member account accepts the invitation and is enabled, Amazon Detective begins to ingest and extract the member account's data into that behavior graph\.
 
 The master account can also remove member accounts from their behavior graph\. See [Removing member accounts from a behavior graph](graph-master-remove-member-accounts.md)\.
 
