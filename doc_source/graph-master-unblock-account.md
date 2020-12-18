@@ -28,7 +28,7 @@ Detective determines whether the member account can be enabled\. If the member a
 
 ## Enabling a member account that is Accepted \(Not enabled\) \(Detective API, AWS CLI\)<a name="unblock-account-api"></a>
 
-You can use an API call or the AWS Command Line Interface to enable a single member account that is **Accepted \(Not enabled\)**\.
+You can use an API call or the AWS Command Line Interface to enable a single member account that is **Accepted \(Not enabled\)**\. To get the ARN of your behavior graph to use in the request, use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html) operation\.
 
 **To enable a member account that is Accepted \(Not enabled\)**
 + Detective API: Use the [https://docs.aws.amazon.com/detective/latest/APIReference/API-StartMonitoringMember.html](https://docs.aws.amazon.com/detective/latest/APIReference/API-StartMonitoringMember.html) API operation\. You must provide the behavior graph ARN\. To identify the member account, use the AWS account identifier\.

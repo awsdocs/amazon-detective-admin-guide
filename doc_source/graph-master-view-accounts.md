@@ -52,7 +52,7 @@ You can use the AWS Management Console to see and filter a list of accounts in y
 
 ## Listing the accounts in the Detective behavior graph \(Detective API, AWS CLI\)<a name="master-view-graph-accounts-api"></a>
 
-You can use an API call or the AWS Command Line Interface to view a list of all invited and monitored member accounts in your behavior graph\.
+You can use an API call or the AWS Command Line Interface to view a list of all invited and monitored member accounts in your behavior graph\. To get the ARN of your behavior graph to use in the request, use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html) operation\.
 
 **To retrieve a list of all of the invited and monitored member accounts \(Detective API, AWS CLI\)**
 + **Detective API:** Use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListMembers.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListMembers.html) operation\. To identify the intended behavior graph, specify the behavior graph ARN\.

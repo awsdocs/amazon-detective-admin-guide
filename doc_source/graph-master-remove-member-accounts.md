@@ -28,7 +28,7 @@ From your master account, you can use the AWS Management Console to remove membe
 
 ## Removing member accounts from a behavior graph \(Detective API, AWS CLI\)<a name="graph-master-remove-accounts-api"></a>
 
-From your master account, you can use the Detective API or the AWS Command Line Interface to remove member accounts from a behavior graph\.
+From your master account, you can use the Detective API or the AWS Command Line Interface to remove member accounts from a behavior graph\. To get the ARN of your behavior graph to use in the request, use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html) operation\.
 
 **To use remove member accounts from your behavior graph \(Detective API, AWS CLI\)**
 + **Detective API:** Use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_DeleteMembers.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_DeleteMembers.html) operation\. Specify the graph ARN and the list of account identifiers for the member accounts to remove\.

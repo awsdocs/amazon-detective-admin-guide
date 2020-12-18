@@ -92,7 +92,7 @@ This option also provides a template that you can use to create the list of acco
 
 ## Inviting member accounts to a behavior graph \(Detective API, AWS CLI\)<a name="graph-master-add-account-api"></a>
 
-You can use the Detective API or the AWS Command Line Interface to invite member accounts to contribute their data to a behavior graph\.
+You can use the Detective API or the AWS Command Line Interface to invite member accounts to contribute their data to a behavior graph\. To get the ARN of your behavior graph to use in the request, use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html) operation\.
 
 **To invite member accounts to a behavior graph \(Detective API, AWS CLI\)**
 + **Detective API:** Use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_CreateMembers.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_CreateMembers.html) operation\. You must provide the graph ARN\. For each account, specify the account identifier and the root user email address\. You can optionally provide custom text to add to the invitation email\.

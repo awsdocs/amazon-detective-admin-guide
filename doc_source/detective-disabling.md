@@ -27,7 +27,7 @@ You can disable Amazon Detective from the AWS Management Console\.
 
 ## Disabling Detective \(Detective API, AWS CLI\)<a name="disable-from-api"></a>
 
-You can disable Amazon Detective from the Detective API or the AWS Command Line Interface\.
+You can disable Amazon Detective from the Detective API or the AWS Command Line Interface\. To get the ARN of your behavior graph to use in the request, use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html) operation\.
 
 **To disable Detective \(Detective API, AWS CLI\)**
 + **Detective API:** Use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_DeleteGraph.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_DeleteGraph.html) operation\. You must provide the graph ARN\.

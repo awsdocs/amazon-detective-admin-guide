@@ -8,7 +8,7 @@ Each behavior graph uses the same structure of findings, entities, and relations
 
 ****Detective source data****  
 Processed, structured versions of information from the following types of feeds:  
-+ AWS logs, such as AWS CloudTrail and Amazon VPC Flow Logs
++ Logs from AWS services, such as AWS CloudTrail logs and Amazon VPC Flow logs
 + GuardDuty findings
 Detective uses the Detective source data to populate the behavior graph\. Detective also stores copies of the Detective source data to support its analytics\.
 
@@ -20,6 +20,11 @@ For each entity, the source data is also used to populate entity properties\. Pr
 
 ****Finding****  
 A security issue detected by Amazon GuardDuty\.
+
+**High\-volume entity**  
+An entity that has connections to or from a very large number of other entities during a time interval\. For example, an EC2 instance might have connections from millions of IP addresses\. The number of connections exceeds the threshold that Detective can accommodate\.  
+When the current scope time contains a high\-volume time interval, Detective notifies the user\.  
+See [Viewing details for high\-volume entities](https://docs.aws.amazon.com/detective/latest/userguide/high-degree-entities.html) in the *Amazon Detective User Guide*\.
 
 ****Investigation****  
 The process of performing triage on suspicious or interesting activity, determining the scope, getting to its underlying source or cause, and then determining how to proceed\.
