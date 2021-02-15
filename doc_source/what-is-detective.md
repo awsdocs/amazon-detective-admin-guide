@@ -2,7 +2,7 @@
 
 Amazon Detective makes it easy to analyze, investigate, and quickly identify the root cause of security findings or suspicious activities\. Detective automatically collects log data from your AWS resources\. It then uses machine learning, statistical analysis, and graph theory to help you visualize and conduct faster and more efficient security investigations\.
 
-The Detective prebuilt data aggregations, summaries, and context help you to quickly analyze and determine the nature and extent of possible security issues\. Detective maintains up to a year of historical event data\. This data is easily available through a set of visualizations that shows changes in the type and volume of activity over a selected time window\. Detective links those changes to GuardDuty findings\.
+The Detective prebuilt data aggregations, summaries, and context help you to quickly analyze and determine the nature and extent of possible security issues\. Detective maintains up to a year of historical event data\. This data is easily available through a set of visualizations that show changes in the type and volume of activity over a selected time window\. Detective links those changes to GuardDuty findings\.
 
 ## How does Detective work?<a name="detective-how-works"></a>
 
