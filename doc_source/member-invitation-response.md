@@ -4,7 +4,7 @@ When you accept an invitation, Detective verifies that your account can be enabl
 
 If it can be enabled, then Detective begins ingesting and extracting data from logs and findings into the behavior graph as of that point in time\. Your account is charged for the data\.
 
-If it cannot be enabled, then the invitation status is **Accepted \(Not enabled\)**\. Your account does not contribute data to the behavior graph\. Unless you remove your account from the behavior graph, the master account can attempt to enable it at any time\.
+If it cannot be enabled, then the invitation status is **Accepted \(Not enabled\)**\. Your account does not contribute data to the behavior graph\. Unless you remove your account from the behavior graph, the administrator account can attempt to enable it at any time\.
 
 If you decline the invitation, then it is removed from your list of invitations, and Detective does not use your account data in the behavior graph\.
 
@@ -18,7 +18,7 @@ You can use the AWS Management Console to respond to the email invitation, which
 
 1. In the Detective navigation pane, choose **Account management**\.
 
-1. Under **My master accounts**, to accept the invitation and begin contributing data to the behavior graph, choose **Accept invitation**\.
+1. Under **My administrator accounts**, to accept the invitation and begin contributing data to the behavior graph, choose **Accept invitation**\.
 
    To decline the invitation and remove it from the list, choose **Decline**\.
 

@@ -12,13 +12,13 @@ You can view behavior graph invitations from the AWS Management Console\.
 
 1. In the Detective navigation pane, choose **Account management**\.
 
-On the **Account management** page, **My master accounts** contains your open and accepted behavior graph invitations in the current Region\.
+On the **Account management** page, **My administrator accounts** contains your open and accepted behavior graph invitations in the current Region\.
 
 If your account is currently in the free trial period, the page also displays the number of days remaining in your free trial\.
 
-The list does not contain invitations that you declined, memberships that you resigned, or memberships that the master account removed\.
+The list does not contain invitations that you declined, memberships that you resigned, or memberships that the administrator account removed\.
 
-Each invitation shows the master account number, the date that the invitation was accepted, and the current status of the invitation\.
+Each invitation shows the administrator account number, the date that the invitation was accepted, and the current status of the invitation\.
 + For invitations that you have not responded to, the status is **Invited**\.
 + For invitations that you accepted, the status is either **Accepted \(Enabled\)** or **Accepted \(Not enabled\)**\.
 

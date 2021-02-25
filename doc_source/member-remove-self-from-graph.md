@@ -12,7 +12,7 @@ You can use the AWS Management Console to remove your account from a behavior gr
 
 1. In the Detective navigation pane, choose **Account management**\.
 
-1. Under **My master account**, for the behavior graph you want to resign from, choose **Resign**\.
+1. Under **My administrator accounts**, for the behavior graph you want to resign from, choose **Resign**\.
 
 ## Removing your account from a behavior graph \(Detective API, AWS CLI\)<a name="member-remove-self-api"></a>
 

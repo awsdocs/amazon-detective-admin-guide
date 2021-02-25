@@ -2,7 +2,7 @@
 
 Before a member account can view and manage invitations, the required IAM policy must be attached to their principal\. The principal can be an existing user or role, or you can create a new user or role to use for Detective\.
 
-Ideally, the master account has their IAM administrator attach the required policy\.
+Ideally, the administrator account has their IAM administrator attach the required policy\.
 
 The member account IAM policy grants access to member account actions in Amazon Detective\. The email invitation to contribute to a behavior graph includes the text of that IAM policy\.
 

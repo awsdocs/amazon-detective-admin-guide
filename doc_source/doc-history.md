@@ -5,6 +5,8 @@ The following table provides a history of the updates to this guide\.
 
 |  Change  |  Description  |  Date  | 
 | --- | --- | --- | 
+|  [Added API option to not send invitation emails to member accounts](https://docs.aws.amazon.com/detective/latest/adminguide/graph-admin-add-member-accounts.html)  |  When using the Detective API to add member accounts, administrator accounts can choose to not send invitation emails to member accounts\.  |  February 25, 2021  | 
+|  Changed "master account" to "administrator account\."  |  The term "master account" is changed to "administrator account\." The term is also changed in the Detective console and API\.  |  February 25, 2021  | 
 | [Added values for behavior graph data volume quotas](https://docs.aws.amazon.com/detective/latest/adminguide/regions-limitations.html#quotas) | Added the specific quota values for behavior graph data volume quotas\. | December 11, 2020 | 
 |  Member account quota increased to 1,200  |  Master accounts can now invite up to 1,200 member accounts to their behavior graph\. Previously the quota was 1,000\.  |  December 11, 2020  | 
 |  Member accounts can now see their usage and projected cost  |  Member accounts can now view their own usage information\. For member accounts, the **Usage** page shows the amount of data ingested into each behavior graph that they contribute to\. Member accounts can also see their projected 30\-day cost\.  |  May 26, 2020  | 

@@ -2,7 +2,7 @@
 
 You can enable Detective from the Detective console, the Detective API, or the AWS Command Line Interface\.
 
-You can only enable Detective once in each Region\. If you are already a master account for a behavior graph in a Region, then you cannot enable Detective again in that Region\.
+You can only enable Detective once in each Region\. If you are already a administrator account for a behavior graph in a Region, then you cannot enable Detective again in that Region\.
 
 Before you try to enable Detective, make sure that your account has been enrolled in Amazon GuardDuty for at least 48 hours\. If you do not meet this requirement, you cannot enable Detective\.
 
@@ -26,7 +26,7 @@ You can enable Amazon Detective from the AWS Management Console\.
 
 1. On the **Enable Amazon Detective** page, review the provided information\.
 
-   **Align master accounts \(recommended\)** explains the recommendation to align the master accounts between Detective and Amazon GuardDuty and AWS Security Hub\. See [Recommended alignment with GuardDuty and AWS Security Hub](detective-prerequisites.md#recommended-service-alignment)\.
+   **Align administrator accounts \(recommended\)** explains the recommendation to align the administrator accounts between Detective and Amazon GuardDuty and AWS Security Hub\. See [Recommended alignment with GuardDuty and AWS Security Hub](detective-prerequisites.md#recommended-service-alignment)\.
 
    **Attach IAM policy \(required\)** contains the IAM policy that is required to enable Detective and manage a behavior graph\. The policy should already be attached to your principal\.
 
@@ -36,7 +36,7 @@ You can enable Amazon Detective from the AWS Management Console\.
 
 1. After you enable Detective, you can invite member accounts to your behavior graph\.
 
-   To navigate to the **Account management** page, choose **Add members now**\. For information on inviting member accounts, see [Inviting member accounts to a behavior graph](graph-master-add-member-accounts.md)\.
+   To navigate to the **Account management** page, choose **Add members now**\. For information on inviting member accounts, see [Inviting member accounts to a behavior graph](graph-admin-add-member-accounts.md)\.
 
 ## Enabling Detective \(Detective API, AWS CLI\)<a name="enable-from-api"></a>
 
@@ -53,7 +53,7 @@ You can enable Amazon Detective from the Detective API or the AWS Command Line I
 ## Enabling Detective across Regions \(Python script on GitHub\)<a name="enable-from-github-scripts"></a>
 
 Detective provides an open\-source script in GitHub that does the following:
-+ Enables Detective for a master account in a specified list of Regions
++ Enables Detective for an administrator account in a specified list of Regions
 + Adds a provided list of member accounts to add to each of the resulting behavior graphs
 + Sends invitation emails to the member accounts
 + Automatically accepts the invitations for the member accounts

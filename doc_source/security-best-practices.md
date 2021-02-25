@@ -4,7 +4,7 @@ Detective provides a number of security features to consider as you develop and 
 
 For Detective, the security best practices are associated with managing the accounts in a behavior graph\.
 
-## Best practices for master accounts<a name="security-best-practices-master-accounts"></a>
+## Best practices for administrator accounts<a name="security-best-practices-admin-accounts"></a>
 
 When inviting member accounts to your behavior graph, only invite accounts that you oversee\.
 
@@ -14,4 +14,4 @@ Limit access to the behavior graph\. When a user has access to a behavior graph,
 
 When you receive an invitation to a behavior graph, make sure to validate the source of the invitation\.
 
-Check the AWS account identifier of the master account that sent the invitation\. Verify that you know who the account belongs to, and that the inviting account has a legitimate reason to monitor your security data\.
+Check the AWS account identifier of the administrator account that sent the invitation\. Verify that you know who the account belongs to, and that the inviting account has a legitimate reason to monitor your security data\.

@@ -1,6 +1,6 @@
-# Viewing the list of accounts in a behavior graph<a name="graph-master-view-accounts"></a>
+# Viewing the list of accounts in a behavior graph<a name="graph-admin-view-accounts"></a>
 
-The master account can use the Detective console or API to view a list of behavior graph accounts\.
+The administrator account can use the Detective console or API to view a list of behavior graph accounts\.
 
 The results do not include member accounts that declined the invitation or that were removed from the behavior graph\. It only includes accounts with the following statuses\.
 
@@ -21,7 +21,7 @@ The member account accepted the invitation, but cannot be enabled\. This status 
 + The member account has not been an Amazon GuardDuty customer for at least 48 hours\.
 + The member account data would cause the behavior graph data volume to exceed the Detective quota\.
 
-## Listing accounts in the Detective behavior graph \(Console\)<a name="master-view-graph-accounts-console"></a>
+## Listing accounts in the Detective behavior graph \(Console\)<a name="admin-view-graph-accounts-console"></a>
 
 You can use the AWS Management Console to see and filter a list of accounts in your behavior graph\.
 
@@ -50,7 +50,7 @@ You can use the AWS Management Console to see and filter a list of accounts in y
 
 1. To update the list with the most recent status information, choose the refresh icon at the top right\.
 
-## Listing the accounts in the Detective behavior graph \(Detective API, AWS CLI\)<a name="master-view-graph-accounts-api"></a>
+## Listing the accounts in the Detective behavior graph \(Detective API, AWS CLI\)<a name="admin-view-graph-accounts-api"></a>
 
 You can use an API call or the AWS Command Line Interface to view a list of all invited and monitored member accounts in your behavior graph\. To get the ARN of your behavior graph to use in the request, use the [https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html](https://docs.aws.amazon.com/detective/latest/APIReference/API_ListGraphs.html) operation\.
 

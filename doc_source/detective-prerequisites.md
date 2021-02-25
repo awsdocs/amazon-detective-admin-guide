@@ -39,15 +39,15 @@ When you try to enable Detective, if the data volume for your account is too lar
 
 ## Recommended alignment with GuardDuty and AWS Security Hub<a name="recommended-service-alignment"></a>
 
-If you are enrolled in GuardDuty and AWS Security Hub, we recommend that your account be a master account for those services\. If the master accounts are the same for all three services, then the following integration points work seamlessly\.
+If you are enrolled in GuardDuty and AWS Security Hub, we recommend that your account be an administrator account for those services\. If the administrator accounts are the same for all three services, then the following integration points work seamlessly\.
 + In GuardDuty or Security Hub, when viewing details for a GuardDuty finding, you can pivot from the finding details to the Detective finding profile\.
 + In Detective, when investigating a GuardDuty finding, you can choose the option to archive that finding\.
 
-If you have different master accounts for GuardDuty and Security Hub, we recommend that you align the master accounts based on the service you use more frequently\.
-+ If you use GuardDuty more frequently, then enable Detective using the GuardDuty master account\.
-+ If you use Security Hub more frequently, then enable Detective using the Security Hub master account\.
+If you have different administrator accounts for GuardDuty and Security Hub, we recommend that you align the administrator accounts based on the service you use more frequently\.
++ If you use GuardDuty more frequently, then enable Detective using the GuardDuty administrator account\.
++ If you use Security Hub more frequently, then enable Detective using the Security Hub administrator account\.
 
-If you cannot use the same master accounts across all of the services, then after you enable Detective, you can optionally create a cross\-account role\. This role grants the Detective master account access to other accounts\.
+If you cannot use the same administrator accounts across all of the services, then after you enable Detective, you can optionally create a cross\-account role\. This role grants the Detective administrator account access to other accounts\.
 
 For information on how IAM supports this type of role, see [Providing access to an IAM user in another AWS account that you own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html) in the *IAM User Guide*\.
 
@@ -55,7 +55,7 @@ For information on how IAM supports this type of role, see [Providing access to 
 
 Before you can enable Detective, if you are not an administrator, then you must attach the following permissions policy to your IAM principal\. The principal can be an existing user or role that you are already using, or you can create a new user or role to use for Detective\.
 
-This policy allows you to perform all master account actions in Detective\.
+This policy allows you to perform all administrator account actions in Detective\.
 
 ```
 {
@@ -100,6 +100,6 @@ In GuardDuty, detectors are configured with an Amazon CloudWatch notification fr
 
 By default, the frequency is six hours\. This means that even if a finding recurs many times, the new occurrences are not reflected in Detective until up to six hours later\.
 
-To reduce the amount of time it takes for Detective to receive these updates, we recommend that the GuardDuty master account changes the setting on their detectors to 15 minutes\. Note that changing the configuration has no effect on the cost of using GuardDuty\.
+To reduce the amount of time it takes for Detective to receive these updates, we recommend that the GuardDuty administrator account changes the setting on their detectors to 15 minutes\. Note that changing the configuration has no effect on the cost of using GuardDuty\.
 
 For information on setting the notification frequency, see [Monitoring GuardDuty Findings with Amazon CloudWatch Events](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html) in the Amazon GuardDuty User Guide\.

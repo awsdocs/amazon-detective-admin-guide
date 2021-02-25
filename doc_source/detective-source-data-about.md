@@ -1,8 +1,8 @@
 # Source data used in a behavior graph<a name="detective-source-data-about"></a>
 
-To populate a behavior graph, Amazon Detective uses source data from the behavior graph master account and member accounts\.
+To populate a behavior graph, Amazon Detective uses source data from the behavior graph administrator account and member accounts\.
 
-![\[Diagram showing how a behavior graph uses data from the master account and member accounts, and uses the behavior graph data structure.\]](http://docs.aws.amazon.com/detective/latest/adminguide/images/diagram_graph_structure_overview.png)
+![\[Diagram showing how a behavior graph uses data from the administrator account and member accounts, and uses the behavior graph data structure.\]](http://docs.aws.amazon.com/detective/latest/adminguide/images/diagram_graph_structure_overview.png)
 
 For details about the behavior graph data structure, see [Overview of the behavior graph data structure](https://docs.aws.amazon.com/detective/latest/userguide/graph-data-structure-overview.html) in *Detective User Guide*\.
 
@@ -22,7 +22,7 @@ Detective consumes CloudTrail and VPC flow log events using independent and dupl
 
 ## How Detective ingests and stores source data<a name="source-data-storage"></a>
 
-When Detective is enabled, Detective begins ingesting source data from the behavior graph master account\. As member accounts are added to the behavior graph, Detective also begins using the data from those member accounts\.
+When Detective is enabled, Detective begins ingesting source data from the behavior graph administrator account\. As member accounts are added to the behavior graph, Detective also begins using the data from those member accounts\.
 
 Detective source data consists of structured and processed versions of the original feeds\. To support Detective analytics, Detective stores copies of the Detective source data\.
 
@@ -32,8 +32,8 @@ The Detective ingest process feeds data into Amazon Simple Storage Service \(Ama
 
 Detective has strict quotas on the volume of data it allows in each behavior graph\. The data volume is the amount of data per day that flows into the Detective behavior graph\.
 
-Detective enforces these quotas when a master account enables Detective, and when a member account accepts an invitation to contribute to a behavior graph\.
-+ If the data volume for a master account exceeds 2\.4 TB per day, then the master account cannot enable Detective\.
+Detective enforces these quotas when an administrator account enables Detective, and when a member account accepts an invitation to contribute to a behavior graph\.
++ If the data volume for an administrator account exceeds 2\.4 TB per day, then the administrator account cannot enable Detective\.
 + If the added data volume from a member account would cause the behavior graph to exceed 2\.4 TB per day, the member account cannot be enabled\.
 
 The data volume for a behavior graph also can grow naturally over time\. Detective checks the behavior graph data volume each day to make sure that it does not exceed the quota\.

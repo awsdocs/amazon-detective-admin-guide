@@ -10,8 +10,8 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Policy best practices](#security_iam_service-with-iam-policy-best-practices)
 + [Using the Detective console](#security_iam_id-based-policy-examples-console)
 + [Allowing users to view their own permissions](#security_iam_id-based-policy-examples-view-own-permissions)
-+ [Master account: Managing the member accounts in a behavior graph](#security_iam_id-based-policy-examples-master-account-mgmt)
-+ [Master account: Using a behavior graph for investigation](#security_iam_id-based-policy-examples-master-investigate)
++ [Administrator account: Managing the member accounts in a behavior graph](#security_iam_id-based-policy-examples-admin-account-mgmt)
++ [Administrator account: Using a behavior graph for investigation](#security_iam_id-based-policy-examples-admin-investigate)
 + [Member account: Managing behavior graph invitations and memberships](#security_iam_id-based-policy-examples-member-account)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
@@ -26,11 +26,11 @@ Identity\-based policies are very powerful\. They determine whether someone can 
 
 To use the Amazon Detective console, the user or role must have access to the relevant actions, which match corresponding actions in the API\.
 
-To enable Detective and become a master account for a behavior graph, the user or role must be granted permission for the `CreateGraph` action\.
+To enable Detective and become an administrator account for a behavior graph, the user or role must be granted permission for the `CreateGraph` action\.
 
-To use the Detective console to perform any master account actions, the user or role must be granted permission for the `ListGraphs` action\. This grants permission to retrieve the behavior graphs their account is a master for\. They also must be granted permission to perform specific master account actions\.
+To use the Detective console to perform any administrator account actions, the user or role must be granted permission for the `ListGraphs` action\. This grants permission to retrieve the behavior graphs their account is an administrator account for\. They also must be granted permission to perform specific administrator account actions\.
 
-The most basic master account actions are to view a list of member accounts in a behavior graph, and to use the behavior graph for investigation\.
+The most basic administrator account actions are to view a list of member accounts in a behavior graph, and to use the behavior graph for investigation\.
 + To view the list of member accounts in a behavior graph, the principal must be granted permission for the `ListMembers` action\.
 + To conduct investigation in a behavior graph, the principal must be granted permission for the `SearchGraph` action\.
 
@@ -75,9 +75,9 @@ This example shows how you might create a policy that allows IAM users to view t
 }
 ```
 
-## Master account: Managing the member accounts in a behavior graph<a name="security_iam_id-based-policy-examples-master-account-mgmt"></a>
+## Administrator account: Managing the member accounts in a behavior graph<a name="security_iam_id-based-policy-examples-admin-account-mgmt"></a>
 
-This example policy is intended for master account users who are only responsible for managing the member accounts used in the behavior graph\. The policy also allows the user to view the usage information and deactivate Detective\. The policy does not grant permission to use the behavior graph for investigation\.
+This example policy is intended for administrator account users who are only responsible for managing the member accounts used in the behavior graph\. The policy also allows the user to view the usage information and deactivate Detective\. The policy does not grant permission to use the behavior graph for investigation\.
 
 ```
 {"Version":"2012-10-17",
@@ -96,9 +96,9 @@ This example policy is intended for master account users who are only responsibl
 }
 ```
 
-## Master account: Using a behavior graph for investigation<a name="security_iam_id-based-policy-examples-master-investigate"></a>
+## Administrator account: Using a behavior graph for investigation<a name="security_iam_id-based-policy-examples-admin-investigate"></a>
 
-This example policy is intended for master account users who use the behavior graph for investigation only\. They cannot view or edit the list of member accounts in the behavior graph\.
+This example policy is intended for administrator account users who use the behavior graph for investigation only\. They cannot view or edit the list of member accounts in the behavior graph\.
 
 ```
 {"Version":"2012-10-17",

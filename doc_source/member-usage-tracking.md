@@ -12,10 +12,10 @@ For member accounts, the **Usage** page shows the volume of data and projected 3
 
 ## Ingested volume for each behavior graph<a name="volume-per-behavior-graph"></a>
 
-**This account's ingested volume** lists the behavior graphs that the member account contributes to\. It does not include memberships that you resigned, or memberships that the master account removed\.
+**This account's ingested volume** lists the behavior graphs that the member account contributes to\. It does not include memberships that you resigned, or memberships that the administrator account removed\.
 
 For each behavior graph, the list includes the following information\.
-+ The account number of the master account
++ The account number of the administrator account
 + The volume of ingested data from the member account over the previous 30 days\. The total includes all source types\.
 + The date when the member account was enabled for the behavior graph\.
 
@@ -24,4 +24,4 @@ For each behavior graph, the list includes the following information\.
 **This account's projected cost** shows a projected cost for 30 days of data for the member account across all of the behavior graphs that it contributes to\. The projected cost is based on the daily average volume for the member account\.
 
 **Important**  
-This amount is a projected cost only\. It projects the total cost for the master account data for a typical 30\-day time period\. It is based on the usage from the previous 30 days\. See [How Amazon Detective calculates projected cost](usage-projected-cost-calculation.md)\.
+This amount is a projected cost only\. It projects the total cost for the administrator account data for a typical 30\-day time period\. It is based on the usage from the previous 30 days\. See [How Amazon Detective calculates projected cost](usage-projected-cost-calculation.md)\.

@@ -1,9 +1,9 @@
 # How Amazon Detective works with IAM<a name="security_iam_service-with-iam"></a>
 
 Detective uses IAM identity\-based policies to grant permissions for the following types of users and actions:
-+ **Master accounts** – The master account is the owner of a behavior graph, which uses data from their account\. Master accounts can invite member accounts to also contribute their data to the behavior graph\. They also use the behavior graph for triage and investigation of findings and resources associated with those accounts\.
++ **Administrator accounts** – The administrator account is the owner of a behavior graph, which uses data from their account\. Administrator accounts can invite member accounts to also contribute their data to the behavior graph\. They also use the behavior graph for triage and investigation of findings and resources associated with those accounts\.
 
-  You can set up different policies to allow different users from the master account to perform different types of tasks\. For example, a user from a master account might only have permissions to manage member accounts\. Another user might only have permissions to use the behavior graph for investigation\.
+  You can set up different policies to allow different users from the administrator account to perform different types of tasks\. For example, a user from an administrator account might only have permissions to manage member accounts\. Another user might only have permissions to use the behavior graph for investigation\.
 + **Member accounts** – A member account is an account that is invited to contribute data to a behavior graph\. A member account responds to an invitation\. After accepting an invitation, a member account can remove their account from the behavior graph\.
 
 To get a high\-level view of how Detective and other AWS services work with IAM, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
@@ -39,7 +39,7 @@ To specify multiple actions in a single statement, separate them with commas\. F
 ]
 ```
 
-You can also use wildcards \(\*\) to specify multiple actions\. For example, to manage the data used in their behavior graph, master accounts in Detective must be able to perform the following tasks:
+You can also use wildcards \(\*\) to specify multiple actions\. For example, to manage the data used in their behavior graph, administrator accounts in Detective must be able to perform the following tasks:
 + View their list of member accounts \(`ListMembers`\)\.
 + Get information about selected member accounts \(`GetMembers`\)\.
 + Invite member accounts to their behavior graph \(`CreateMembers`\)\.
@@ -79,7 +79,7 @@ arn:aws:detective:${Region}:${AccountId}:graph:${GraphId}
 
 For example, a behavior graph has the following values:
 + The Region for the behavior graph is `us-east-1`\.
-+ The account ID for the master account ID is `111122223333`\.
++ The account ID for the administrator account ID is `111122223333`\.
 + The graph ID of the behavior graph is `027c7c4610ea4aacaf0b883093cab899`\.
 
 To identify this behavior graph in a `Resource` statement, you would use the following ARN:
@@ -112,7 +112,7 @@ Some Detective actions, such as creating a behavior graph, listing behavior grap
 "Resource": "*"
 ```
 
-For master account actions, Detective always verifies that the user making the request belongs to the master account for the affected behavior graph\. For member account actions, Detective always verifies that the user making the request belongs to the member account\. Even if an IAM policy grants access to a behavior graph, if the user does not belong to the correct account, the user cannot perform the action\.
+For administrator account actions, Detective always verifies that the user making the request belongs to the administrator account for the affected behavior graph\. For member account actions, Detective always verifies that the user making the request belongs to the member account\. Even if an IAM policy grants access to a behavior graph, if the user does not belong to the correct account, the user cannot perform the action\.
 
 For all actions that are performed on a specific behavior graph, the IAM policy should include the graph ARN\. The graph ARN can be added later\. For example, when an account first enables Detective, the initial IAM policy provides access to all Detective actions, using the wildcard for the graph ARN\. This allows the user to immediately start to manage member accounts for and conduct investigations in their behavior graph\. After the behavior graph is created, you can update the policy to add the graph ARN\.
 

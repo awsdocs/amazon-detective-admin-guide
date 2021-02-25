@@ -19,12 +19,12 @@ With Detective, you don't have to organize any data or develop, configure, or tu
 
 ## Who uses Detective?<a name="detective-who-uses"></a>
 
-When an account enables Detective, it becomes the master account for a behavior graph\. A behavior graph is a linked set of extracted and analyzed data from one or more AWS accounts\. Master accounts invite member accounts to contribute their data to the master account's behavior graph\.
+When an account enables Detective, it becomes the administrator account for a behavior graph\. A behavior graph is a linked set of extracted and analyzed data from one or more AWS accounts\. Administrator accounts invite member accounts to contribute their data to the administrator account's behavior graph\.
 
 For information about how Detective uses source data from behavior graph accounts, see [Source data used in a behavior graph](detective-source-data-about.md)\.
 
-For information on how master accounts manage behavior graphs, see [For master accounts: Managing the accounts in your behavior graph](master-account-graph-management.md)\. For information on how member accounts manage their behavior graph invitations and memberships, see [For member accounts: Managing behavior graph invitations and memberships](member-account-graph-management.md)\.
+For information on how administrator accounts manage behavior graphs, see [For administrator accounts: Managing the accounts in your behavior graph](admin-account-graph-management.md)\. For information on how member accounts manage their behavior graph invitations and memberships, see [For member accounts: Managing behavior graph invitations and memberships](member-account-graph-management.md)\.
 
-The master account uses the analytics and visualizations generated from the behavior graph to investigate AWS resources and GuardDuty findings\. The Detective integrations with GuardDuty and AWS Security Hub allow you to pivot from a GuardDuty finding in these services directly into the Detective console\.
+The administrator account uses the analytics and visualizations generated from the behavior graph to investigate AWS resources and GuardDuty findings\. The Detective integrations with GuardDuty and AWS Security Hub allow you to pivot from a GuardDuty finding in these services directly into the Detective console\.
 
 A Detective investigation focuses on the activity that is connected to the involved AWS resources\. For an overview of the investigation process in Detective, see [How Amazon Detective is used for investigation](https://docs.aws.amazon.com/detective/latest/userguide/detective-investigation-about.html) in *Detective User Guide*\.

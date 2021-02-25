@@ -1,6 +1,6 @@
 # For member accounts: Managing behavior graph invitations and memberships<a name="member-account-graph-management"></a>
 
-A member account receives an invitation from the master account for a behavior graph\. The invitation indicates that the master account wants to use the member account's data in the behavior graph\. A member account can be invited to contribute to multiple behavior graphs\. For more information, see [Viewing your list of behavior graph invitations](member-view-graph-invitations.md)\.
+A member account receives an invitation from the administrator account for a behavior graph\. The invitation indicates that the administrator account wants to use the member account's data in the behavior graph\. A member account can be invited to contribute to multiple behavior graphs\. For more information, see [Viewing your list of behavior graph invitations](member-view-graph-invitations.md)\.
 
 Amazon Detective charges each member account for the ingested data for each behavior graph that it contributes to\.
 

@@ -2,6 +2,10 @@
 
 The following terms and concepts are important for understanding Amazon Detective and how it works:
 
+****Administrator account****  
+The AWS account that owns a behavior graph and that uses the behavior graph for investigation\.  
+The administrator account invites member accounts to contribute their data to the behavior graph\. Administrator accounts can also view data usage for the behavior graph, and remove member accounts from the behavior graph\.
+
 ****Behavior graph****  
 A linked set of data generated from incoming source data that is associated with one or more AWS accounts\.  
 Each behavior graph uses the same structure of findings, entities, and relationships\.
@@ -29,12 +33,8 @@ See [Viewing details for high\-volume entities](https://docs.aws.amazon.com/dete
 ****Investigation****  
 The process of performing triage on suspicious or interesting activity, determining the scope, getting to its underlying source or cause, and then determining how to proceed\.
 
-****Master account****  
-The AWS account that owns a behavior graph and that uses the behavior graph for investigation\.  
-The master account invites member accounts to contribute their data to the behavior graph\. Master accounts can also view data usage for the behavior graph, and remove member accounts from the behavior graph\.
-
 ****Member account****  
-An AWS account that a master account invited to contribute data to a behavior graph\.  
+An AWS account that a administrator account invited to contribute data to a behavior graph\.  
 Member accounts can respond to the behavior graph invitation and remove their account from the behavior graph\.  
 They can also view usage information for their account across the behavior graphs that they contribute data to\.  
 They have no other access to the behavior graph\.

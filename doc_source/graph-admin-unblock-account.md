@@ -1,4 +1,4 @@
-# Enabling a member account that is Accepted \(Not enabled\)<a name="graph-master-unblock-account"></a>
+# Enabling a member account that is Accepted \(Not enabled\)<a name="graph-admin-unblock-account"></a>
 
 After a member account accepts an invitation, Amazon Detective checks whether it can enable the member account\. If Detective cannot enable the member account, then it sets the member account status to **Accepted \(Not enabled\)**\. This can happen for one of the following reasons\.
 + The member account has not been an Amazon GuardDuty customer for at least 48 hours\.
