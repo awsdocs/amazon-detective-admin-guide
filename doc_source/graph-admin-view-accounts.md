@@ -38,6 +38,13 @@ You can use the AWS Management Console to see and filter a list of accounts in y
    + The data volume for the account\. This is the percentage of data volume for the account relative to the maximum allowed data volume for a behavior graph\. Detective cannot retrieve the data volume for member accounts that have not accepted the behavior graph invitation\.
    + The date when the account status was last updated\.
 
+You can use the tabs at the top of the table to filter the list based on the member account status\. Each tab shows the number of matching member accounts\.
++ Choose **All** to view all of the member accounts\.
++ Choose **Enabled** to view accounts that have a status of **Accepted \(Enabled\)**\.
++ Choose **Not enabled** to view accounts that have a status other than **Accepted \(Enabled\)**\.
+
+You also can add other filters to the member account list\.
+
 **To add a filter to the list of accounts in the behavior graph \(console\)**
 
 1. Choose the filter box\.

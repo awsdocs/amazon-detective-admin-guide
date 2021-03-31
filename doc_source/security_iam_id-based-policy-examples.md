@@ -13,6 +13,7 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Administrator account: Managing the member accounts in a behavior graph](#security_iam_id-based-policy-examples-admin-account-mgmt)
 + [Administrator account: Using a behavior graph for investigation](#security_iam_id-based-policy-examples-admin-investigate)
 + [Member account: Managing behavior graph invitations and memberships](#security_iam_id-based-policy-examples-member-account)
++ [Administrator account: Restricting access based on tag values](#security_iam_id-based-policy-examples-graph-tags)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
 
@@ -138,5 +139,46 @@ This example policy is intended for users belonging to a member account\. In the
     "Resource":"*"
   }
  ]
+}
+```
+
+## Administrator account: Restricting access based on tag values<a name="security_iam_id-based-policy-examples-graph-tags"></a>
+
+The following policy allows the user to use a behavior graph for investigation if the `SecurityDomain` tag of the behavior graph matches the `SecurityDomain` tag of the user\. 
+
+```
+{
+    "Version":"2012-10-17",
+    "Statement":[ {
+        "Effect":"Allow",
+        "Action":["detective:SearchGraph"],
+        "Resource":"arn:aws:detective:*:*:graph:*",
+        "Condition": {
+            "StringEquals"{
+                "aws:ResourceTag/SecurityDomain": "aws:PrincipalTag/SecurityDomain"
+            }
+        }
+    },
+    {
+        "Effect":"Allow",
+        "Action":["detective:ListGraphs"],
+        "Resource":"*"
+    } ]
+}
+```
+
+The following policy prevents the users from using a behavior graph for investigation if the value of the `SecurityDomain` tag for the behavior graph is `Finance`\.
+
+```
+{
+    "Version":"2012-10-17",
+    "Statement":[ {
+        "Effect":"Deny",
+        "Action":["detective:SearchGraph"],
+        "Resource":"arn:aws:detective:*:*:graph:*",
+        "Condition": {
+            "StringEquals": {"aws:ResourceTag/SecurityDomain": "Finance"}
+        }
+    } ]
 }
 ```

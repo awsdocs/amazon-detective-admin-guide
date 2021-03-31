@@ -73,6 +73,9 @@ This policy allows you to perform all administrator account actions in Detective
         "detective:ListMembers",
         "detective:SearchGraph",
         "detective:StartMonitoringMember",
+        "detective:ListTagsForResource",
+        "detective:TagResource",
+        "detective:UntagResource",
         "guardduty:ArchiveFindings",
         "guardduty:ListDetectors"
       ],

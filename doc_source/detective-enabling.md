@@ -2,7 +2,7 @@
 
 You can enable Detective from the Detective console, the Detective API, or the AWS Command Line Interface\.
 
-You can only enable Detective once in each Region\. If you are already a administrator account for a behavior graph in a Region, then you cannot enable Detective again in that Region\.
+You can only enable Detective once in each Region\. If you already are the administrator account for a behavior graph in the Region, then you cannot enable Detective again in that Region\.
 
 Before you try to enable Detective, make sure that your account has been enrolled in Amazon GuardDuty for at least 48 hours\. If you do not meet this requirement, you cannot enable Detective\.
 
@@ -24,15 +24,27 @@ You can enable Amazon Detective from the AWS Management Console\.
 
 1. Choose **Get started**\.
 
-1. On the **Enable Amazon Detective** page, review the provided information\.
+1. On the **Enable Amazon Detective** page, **Align administrator accounts \(recommended\)** explains the recommendation to align the administrator accounts between Detective and Amazon GuardDuty and AWS Security Hub\. See [Recommended alignment with GuardDuty and AWS Security Hub](detective-prerequisites.md#recommended-service-alignment)\.
 
-   **Align administrator accounts \(recommended\)** explains the recommendation to align the administrator accounts between Detective and Amazon GuardDuty and AWS Security Hub\. See [Recommended alignment with GuardDuty and AWS Security Hub](detective-prerequisites.md#recommended-service-alignment)\.
+1. **Attach IAM policy \(required\)** contains the IAM policy that is required to enable Detective and manage a behavior graph\. The policy should already be attached to your principal\.
 
-   **Attach IAM policy \(required\)** contains the IAM policy that is required to enable Detective and manage a behavior graph\. The policy should already be attached to your principal\.
+   If it is not yet attached, choose **Copy IAM policy** to copy the policy so that you can attach it\.
 
-1. If it is not yet attached, choose **Copy IAM policy** to copy the policy so that you can attach it\.
+   Confirm that the required IAM policy is in place\.
 
-   Confirm that the required IAM policy is in place\. Then choose **Enable Amazon Detective**\.
+1. The **Add tags** section allows you to add tags to the behavior graph\.
+
+   To add a tag, do the following:
+
+   1. Choose **Add new tag**\.
+
+   1. For **Key**, enter the name of the tag\.
+
+   1. For **Value**, enter the value of the tag\.
+
+   To remove a tag, choose the **Remove** option for that tag\.
+
+1. Choose **Enable Amazon Detective**\.
 
 1. After you enable Detective, you can invite member accounts to your behavior graph\.
 
@@ -47,14 +59,20 @@ You can enable Amazon Detective from the Detective API or the AWS Command Line I
 + **AWS CLI:** At the command line, run the `create-graph` command\.
 
   ```
-  aws detective create-graph
+  aws detective create-graph --tags '{"tagName": "tagValue"}'
+  ```
+
+  The following command enables Detective and sets the value of the `Department` tag to `Security`\.
+
+  ```
+  aws detective create-graph --tags '{"Department": "Security"}'
   ```
 
 ## Enabling Detective across Regions \(Python script on GitHub\)<a name="enable-from-github-scripts"></a>
 
 Detective provides an open\-source script in GitHub that does the following:
 + Enables Detective for an administrator account in a specified list of Regions
-+ Adds a provided list of member accounts to add to each of the resulting behavior graphs
++ Adds a provided list of member accounts to each of the resulting behavior graphs
 + Sends invitation emails to the member accounts
 + Automatically accepts the invitations for the member accounts
 

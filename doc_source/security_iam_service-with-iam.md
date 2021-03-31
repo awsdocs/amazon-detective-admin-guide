@@ -144,9 +144,23 @@ To view examples of Detective identity\-based policies, see [Amazon Detective id
 
 Detective does not support resource\-based policies\.
 
-## Authorization based on Detective tags \(Not supported\)<a name="security_iam_service-with-iam-tags"></a>
+## Authorization based on Detective behavior graph tags<a name="security_iam_service-with-iam-tags"></a>
 
-Detective does not support tagging resources or controlling access based on tags\.
+Each behavior graph can be assigned tag values\. You can use those tag values in condition statements to manage access to the behavior graph\.
+
+The condition statement for a tag value uses the following format\.
+
+```
+{"StringEquals"{"aws:ResourceTag/<tagName>": "<tagValue>"}}
+```
+
+For example, use the following code to allow or deny an action when the value of the `Department` tag is `Finance`\.
+
+```
+{"StringEquals"{"aws:ResourceTag/Department": "Finance"}}
+```
+
+For examples of policies that use resource tag values, see [Administrator account: Restricting access based on tag values](security_iam_id-based-policy-examples.md#security_iam_id-based-policy-examples-graph-tags)\.
 
 ## Detective IAM Roles<a name="security_iam_service-with-iam-roles"></a>
 

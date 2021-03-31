@@ -8,9 +8,13 @@ At a high level, the process for inviting members to contribute to a behavior gr
 
 1. Detective validates that the email address is the root user email address for the account\.
 
+   Detective does not perform this validation in the AWS GovCloud \(US\-East\) or AWS GovCloud \(US\-West\) Regions\.
+
 1. If the account information is valid, Detective sends the invitation to the member account\.
 
-   The Detective API includes an option to not send invitations to the member accounts\.
+   Detective never sends email invitations to member accounts in the AWS GovCloud \(US\-East\) or AWS GovCloud \(US\-West\) Regions\.
+
+   For other Regions, the Detective API includes an option to not send invitations to the member accounts\.
 
    This option is useful for accounts that are managed centrally\.
 

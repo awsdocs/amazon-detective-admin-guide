@@ -1,6 +1,10 @@
 # Removing member accounts from a behavior graph<a name="graph-admin-remove-member-accounts"></a>
 
-The administrator account can remove member accounts from a behavior graph at any time\. When a member account is removed from a behavior graph, the following occurs\.
+The administrator account can remove member accounts from a behavior graph at any time\.
+
+Detective automatically removes member accounts that are terminated in AWS, except in the AWS GovCloud \(US\-East\) and AWS GovCloud \(US\-West\) Regions\.
+
+When a member account is removed from a behavior graph, the following occurs\.
 + The member account is removed from **My member accounts**\.
 + Amazon Detective stops ingesting data from the removed account\.
 

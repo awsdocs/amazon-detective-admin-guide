@@ -5,6 +5,7 @@ Amazon Detective provides a set of open\-source Python scripts in the GitHub rep
 You can use these to perform the following tasks:
 + Enable Detective for an administrator account across Regions\.
 + Add member accounts to an administrator account's behavior graphs across Regions\.
++ Optionally send invitation emails to the member accounts\. You can also configure the request to not send invitation emails\.
 + Remove member accounts from an administrator account's behavior graphs across Regions\.
 + Disable Detective for an administrator account across Regions\. When an administrator account disables Detective, the administrator account's behavior graph in each Region is disabled\.
 
@@ -14,9 +15,11 @@ The `enableDetective.py` script does the following:
 
 1. Enables Detective in for an administrator account in each specified Region, if the administrator account does not already have Detective enabled in that Region\.
 
-1. Sends invitations from the administrator account to the specified member accounts for each behavior graph\.
+1. Optionally sends invitations from the administrator account to the specified member accounts for each behavior graph\.
 
    The invitation email messages use the default message content and cannot be customized\.
+
+   You can also configure the request to not send invitation emails\.
 
 1. Automatically accepts the invitations for the member accounts\.
 
@@ -156,7 +159,7 @@ You can run the `enableDetective.py` script from an EC2 instance or your local m
 1. Run the `enableDetective.py` script\.
 
    ```
-   enableDetective.py --master_account administratorAccountID --assume_role roleName inputFileName --enabled_regions regionList
+   enableDetective.py --master_account administratorAccountID --assume_role roleName inputFileName --enabled_regions regionList  --disable_email
    ```
 
 When you run the script, replace the following values:
@@ -178,6 +181,9 @@ The name of the `.csv` file containing the list of member accounts to add to the
 ```
 The administrator account might not already have Detective enabled in a Region\. In that case, the script enables Detective and creates a new behavior graph for the administrator account\.  
 If you do not provide a list of Regions, then the script acts across all Regions that Detective supports\.
+
+`--disable_email`  
+\(Optional\) If included, Detective does not send invitation emails to the member accounts\.
 
 ## Running `disableDetective.py`<a name="github-scripts-execute-disabledetective"></a>
 

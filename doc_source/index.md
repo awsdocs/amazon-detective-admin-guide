@@ -1,7 +1,7 @@
 # Amazon Detective Administration Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -37,6 +37,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Monitoring usage and cost across behavior graphs (member account)](member-usage-tracking.md)
    + [How Amazon Detective calculates projected cost](usage-projected-cost-calculation.md)
    + [Logging Amazon Detective API calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [Managing tags for a behavior graph](graph-tags.md)
 + [Security in Amazon Detective](security.md)
    + [Data protection in Amazon Detective](data-protection.md)
       + [Key management for Amazon Detective](key-management.md)
