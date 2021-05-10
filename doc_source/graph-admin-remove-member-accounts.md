@@ -24,7 +24,7 @@ You can use the AWS Management Console to remove member accounts from your behav
 
    You cannot delete your own account from the list\.
 
-1. Choose **Manage accounts**\. Then choose **Remove account**\.
+1. Choose **Actions**\. Then choose **Remove accounts**\.
 
 1. When prompted to confirm, enter **remove**\.
 

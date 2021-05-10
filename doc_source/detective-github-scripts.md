@@ -39,31 +39,9 @@ The scripts require a preexisting AWS role in the administrator account and in a
 
 The role name must be the same in all of the accounts\.
 
+The [`AmazonDetectiveFullAccess` managed policy](security-iam-awsmanpol.md#security-iam-awsmanpol-amazondetectivefullaccess) contains the permissions that are required for the script to succeed\.
+
 The role trust relationship must allow your instance or local credentials to assume the role\.
-
-The `AmazonDetectiveFullAccess` managed policy shown below contains the permissions that are required for the script to succeed\.
-
-**Role policy**
-
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "detective:CreateMembers",
-                "detective:DeleteMembers",
-                "detective:AcceptInvitation",
-                "guardduty:ArchiveFindings",
-                "guardduty:ListDetectors"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
 
 **Role trust relationship**
 
@@ -82,7 +60,7 @@ The `AmazonDetectiveFullAccess` managed policy shown below contains the permissi
 }
 ```
 
-If you do not have a common role that includes at least the above permissions, you must create a role with at least those permissions in each member account and in the administrator account\.
+If you do not have a common role that includes the required permissions, you must create a role with at least those permissions in each member account\. You must also create the role in the administrator account\.
 
 When you create the role, make sure that you do the following:
 + Use the same role name in every account\.
@@ -90,7 +68,7 @@ When you create the role, make sure that you do the following:
 
 To automate this process, you can use the `EnableDetective.yaml` AWS CloudFormation template\. Because the template creates only global resources, it can be run in any Region\.
 
-## Setting up the execution environment for the Python scripts<a name="github-script-setup"></a>
+## Setting up the run environment for the Python scripts<a name="github-script-setup"></a>
 
 You can run the scripts from either an EC2 instance or from a local machine\.
 

@@ -35,7 +35,7 @@ You can use the AWS Management Console to see and filter a list of accounts in y
    + The AWS account identifier\.
    + For member accounts only, the account root user email address\.
    + The account status\.
-   + The data volume for the account\. This is the percentage of data volume for the account relative to the maximum allowed data volume for a behavior graph\. Detective cannot retrieve the data volume for member accounts that have not accepted the behavior graph invitation\.
+   + The daily data volume for the account\. Detective cannot retrieve the data volume for member accounts that have not accepted the behavior graph invitation\.
    + The date when the account status was last updated\.
 
 You can use the tabs at the top of the table to filter the list based on the member account status\. Each tab shows the number of matching member accounts\.

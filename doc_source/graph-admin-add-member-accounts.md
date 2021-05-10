@@ -40,9 +40,11 @@ You can manually specify which member accounts to invite to contribute their dat
 
 1. In the Detective navigation pane, choose **Account management**\.
 
-1. Under **My member accounts**, choose **Invite individual accounts**\.
+1. Choose **Actions**\. Then choose **Invite accounts**\.
 
-1. Under **Add accounts**, add a member account to the invitation list\.
+1. Under **Add accounts**, choose **Add individual accounts**\.
+
+1. To add a member account to the invitation list, perform the following steps\.
 
    1. Choose **Add account**\.
 
@@ -84,9 +86,11 @@ This option also provides a template that you can use to create the list of acco
 
 1. In the Detective navigation pane, choose **Account management**\.
 
-1. Under **My member accounts**, choose **Invite accounts from \.csv**\.
+1. Choose **Actions**\. Then choose **Invite accounts**\.
 
-1. Under **Add accounts**, to download a template file to work from, choose **Download \.csv template**\.
+1. Under **Add accounts**, choose **Add from \.csv**\.
+
+1. To download a template file to work from, choose **Download \.csv template**\.
 
 1. To select the file containing the list of accounts, choose **Choose \.csv file**\.
 

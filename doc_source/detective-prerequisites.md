@@ -85,6 +85,8 @@ This policy allows you to perform all administrator account actions in Detective
 }
 ```
 
+You can also use the [`AmazonDetectiveFullAccess` managed policy](security-iam-awsmanpol.md#security-iam-awsmanpol-amazondetectivefullaccess), which grants access to all Detective actions\.
+
 ## Enabling the display of account names<a name="detective-enable-account-name-display"></a>
 
 By default, the Detective console displays AWS account IDs\.
@@ -96,6 +98,8 @@ To have Detective display account names, your account must belong to the organiz
 You also must have the following permissions:
 + `organizations:ListAccounts`
 + `organizations:DescribeOrganization`
+
+These permissions are included in the [`AmazonDetectiveFullAccess` managed policy](security-iam-awsmanpol.md#security-iam-awsmanpol-amazondetectivefullaccess)\.
 
 ## Recommended update to the GuardDuty CloudWatch notification frequency<a name="recommended-guardduty-config"></a>
 

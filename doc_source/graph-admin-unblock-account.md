@@ -22,7 +22,7 @@ On the member account list, the **Manage** menu includes an option to enable sel
 
    You can only enable member accounts that have a status of **Accepted \(Not enabled\)**\.
 
-1. Choose **Manage accounts**, then choose **Enable**\.
+1. Choose **Enable accounts**\.
 
 Detective determines whether the member account can be enabled\. If the member account can be enabled, the status changes to **Accepted \(Enabled\)**\.
 

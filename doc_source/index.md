@@ -45,6 +45,7 @@ Amazon's trademarks and trade dress may not be used in
       + [How Amazon Detective works with IAM](security_iam_service-with-iam.md)
       + [Amazon Detective identity-based policy examples](security_iam_id-based-policy-examples.md)
       + [Troubleshooting Amazon Detective identity and access](security_iam_troubleshoot.md)
+   + [AWS managed policies for Amazon Detective](security-iam-awsmanpol.md)
    + [Logging and monitoring in Amazon Detective](detective-monitoring-logging.md)
    + [Compliance validation for Amazon Detective](detective-compliance.md)
    + [Resilience in Amazon Detective](disaster-recovery-resiliency.md)

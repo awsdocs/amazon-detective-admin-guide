@@ -15,6 +15,7 @@ This documentation helps you understand how to apply the shared responsibility m
 **Topics**
 + [Data protection in Amazon Detective](data-protection.md)
 + [Identity and access management for Amazon Detective](security-iam.md)
++ [AWS managed policies for Amazon Detective](security-iam-awsmanpol.md)
 + [Logging and monitoring in Amazon Detective](detective-monitoring-logging.md)
 + [Compliance validation for Amazon Detective](detective-compliance.md)
 + [Resilience in Amazon Detective](disaster-recovery-resiliency.md)
