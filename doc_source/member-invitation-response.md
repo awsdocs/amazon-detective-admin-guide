@@ -1,10 +1,10 @@
 # Responding to a behavior graph invitation<a name="member-invitation-response"></a>
 
-When you accept an invitation, Detective verifies that your account can be enabled for the behavior graph\.
+When you accept an invitation, your account status is set initially to **Accepted \(Not enabled\)** while Detective checks whether your account would cause the data volume for the behavior graph to exceed the Detective quota\. For Detective to make this check, your account must have had Amazon GuardDuty enabled for at least 48 hours\.
 
-If it can be enabled, then Detective begins ingesting and extracting data from logs and findings into the behavior graph as of that point in time\. Your account is charged for the data\.
+If your account would not cause the behavior graph to exceed the quota, Detective updates your account status to **Accepted \(Enabled\)**\. Detective begins to ingest and extract data from logs and findings into the behavior graph as of that point in time\. Your account is charged for the data\.
 
-If it cannot be enabled, then the invitation status is **Accepted \(Not enabled\)**\. Your account does not contribute data to the behavior graph\. Unless you remove your account from the behavior graph, the administrator account can attempt to enable it at any time\.
+If the addition of your account would cause the volume of data for the behavior graph to exceed the Detective quota, or if you do not have GuardDuty enabled, the status remains **Accepted \(Not enabled\)**\. In this case, unless you remove your account, Detective automatically enables your account as soon as the behavior graph can accommodate it\. The administrator account can also enable your account manually\.
 
 If you decline the invitation, then it is removed from your list of invitations, and Detective does not use your account data in the behavior graph\.
 

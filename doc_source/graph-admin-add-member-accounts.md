@@ -26,9 +26,23 @@ At a high level, the process for inviting members to contribute to a behavior gr
 
    If it has, then Detective checks whether the member account data would cause the data rate for the behavior graph to exceed the quota\.
 
-1. If the member account passes both of those checks, then the member account status is **Accepted \(Enabled\)**\. Detective begins to ingest data from the member account into the behavior graph\.
+   This check can take between 24 to 48 hours\.
 
-   If it fails either of those checks, then the member account status is **Accepted \(Not enabled\)**\. The member account does not contribute data to the behavior graph\.
+   While Detective verifies the data rate, the member account status is **Accepted \(Not enabled\)**\.
+
+1. If the member account passes both of those checks, then the member account status is updated automatically to **Accepted \(Enabled\)**\. Detective begins to ingest data from the member account into the behavior graph\.
+
+   If it fails either of those checks, then the member account status remains **Accepted \(Not enabled\)**\. The member account does not contribute data to the behavior graph\.
+
+1. As soon as the member account is eligible to be enabled, Detective automatically changes the member account status to **Accepted \(Enabled\)**\.
+
+   For example, a member account enables GuardDuty, and Detective verifies that their data volume is not too large\. Or the administrator account removes other member accounts to make space for an account\.
+
+   If more than one account is **Accepted \(Not enabled\)**, then Detective enables the accounts in the order in which they were invited\. The process to check whether to enable any **Accepted \(Not enabled\)** accounts runs every hour\.
+
+   The administrator account can also enable accounts manually, instead of waiting for the automatic process\. For example, the administrator account might want to select the accounts to enable\. See [Enabling a member account that is Accepted \(Not enabled\)](graph-admin-unblock-account.md)\.
+
+   Note that Detective began to automatically enable accounts that are **Accepted \(Not enabled\)** on May 12, 2021\. Accounts that were **Accepted \(Not enabled\)** before then are not enabled automatically\. The administrator account must enable them manually\.
 
 ## Inviting individual accounts to a behavior graph \(Console\)<a name="graph-admin-select-accounts-individual"></a>
 

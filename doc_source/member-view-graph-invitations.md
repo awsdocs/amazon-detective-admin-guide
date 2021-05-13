@@ -24,9 +24,13 @@ Each invitation shows the administrator account number, the date that the invita
 
   If the status is **Accepted \(Enabled\)**, then your account contributes data to the behavior graph\.
 
-  If the status is **Accepted \(Not enabled\)**, then your account does not contribute data to the behavior graph because of an issue with your account\. This could occur for one of the following reasons\.
-  + When you accepted the invitation, your account was not an Amazon GuardDuty customer for at least 48 hours\.
-  + The addition of your account would cause the volume of data for the behavior graph to exceed the Detective quota\.
+  If the status is **Accepted \(Not enabled\)**, then your account does not contribute data to the behavior graph\.
+
+  Your account status is set initially to **Accepted \(Not enabled\)** while Detective checks whether you have GuardDuty enabled, and if so, whether your account would cause the data volume for the behavior graph to exceed the Detective quota\.
+
+  If your account would not cause the behavior graph to exceed the quota, Detective updates your account status to **Accepted \(Enabled\)**\. Otherwise, the status remains **Accepted \(Not enabled\)**\.
+
+  When the behavior graph is able to accommodate the data volume for your account, Detective automatically updates it to **Accepted \(Enabled\)**\. For example, the administrator account might remove other member accounts so that your account can be enabled\. The administrator account can also enable your account manually\.
 
 ## Viewing behavior graph invitations \(Detective API, AWS CLI\)<a name="member-view-invitations-api"></a>
 

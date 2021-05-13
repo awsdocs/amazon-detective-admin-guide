@@ -40,8 +40,8 @@ The data volume for a behavior graph also can grow naturally over time\. Detecti
 
 If the behavior graph data volume is approaching the quota, Detective displays a warning message on the console\. To avoid exceeding the quota, you can remove member accounts\.
 
-If the behavior graph data volume exceeds 1\.9 TB per day, then you cannot add a new member account to the behavior graph\.
+If the behavior graph data volume exceeds 2\.4 TB per day, then you cannot add a new member account to the behavior graph\.
 
-If the behavior graph data volume exceeds 2\.4 TB per day, then Detective stops ingesting data into the behavior graph\. No new data is ingested into the behavior graph, but existing data is not removed\. You can still use that historical data for investigation\. The console displays a message to indicate that the data ingest is suspended for the behavior graph\.
+If the behavior graph data volume exceeds 3\.0 TB per day, then Detective stops ingesting data into the behavior graph\. The 3\.0 TB per day reflects both normal data volume and spikes in the data volume\. When this quota is reached, no new data is ingested into the behavior graph, but existing data is not removed\. You can still use that historical data for investigation\. The console displays a message to indicate that the data ingest is suspended for the behavior graph\.
 
 If the data ingest is suspended, you must work with AWS Support to get it re\-enabled\. If possible, before you contact AWS Support, try to remove member accounts to get the data volume below the quota\. This makes it easier to re\-enable the data ingest for the behavior graph\.

@@ -2,11 +2,14 @@
 
 After a member account accepts an invitation, Amazon Detective checks whether it can enable the member account\. If Detective cannot enable the member account, then it sets the member account status to **Accepted \(Not enabled\)**\. This can happen for one of the following reasons\.
 + The member account has not been an Amazon GuardDuty customer for at least 48 hours\.
++ Detective is verifying the data volume for the member account\.
 + The member account data would cause the behavior graph data rate to exceed the quota\.
 
 Member accounts that are **Accepted \(Not enabled\)** do not contribute data to the behavior graph\.
 
-You can try to enable **Accepted \(Not enabled\)** member accounts\. For example, if a member account was not a GuardDuty customer, you can try again 48 hours after the member account enables GuardDuty\.
+Detective automatically enables accounts as the behavior graph can accommodate them\.
+
+You can also try to enable member accounts manually that are **Accepted \(Not enabled\)** member accounts\. For example, you might remove existing member accounts to reduce the data volume\. Instead of waiting for the automatic process to enable accounts, you can try to enable **Accepted \(Not enabled\)** member accounts\.
 
 ## Enabling a member account that is Accepted \(Not enabled\) \(Console\)<a name="unblock-account-console"></a>
 
