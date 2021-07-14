@@ -4,6 +4,8 @@ Amazon Detective provides a set of open\-source Python scripts in the GitHub rep
 
 You can use these to perform the following tasks:
 + Enable Detective for an administrator account across Regions\.
+
+  When you enable Detective, you can assign tag values to the behavior graph\.
 + Add member accounts to an administrator account's behavior graphs across Regions\.
 + Optionally send invitation emails to the member accounts\. You can also configure the request to not send invitation emails\.
 + Remove member accounts from an administrator account's behavior graphs across Regions\.
@@ -14,6 +16,8 @@ You can use these to perform the following tasks:
 The `enableDetective.py` script does the following:
 
 1. Enables Detective in for an administrator account in each specified Region, if the administrator account does not already have Detective enabled in that Region\.
+
+   When you use the script to enable Detective, you can assign tag values to the behavior graph\.
 
 1. Optionally sends invitations from the administrator account to the specified member accounts for each behavior graph\.
 
@@ -137,7 +141,7 @@ You can run the `enableDetective.py` script from an EC2 instance or your local m
 1. Run the `enableDetective.py` script\.
 
    ```
-   enableDetective.py --master_account administratorAccountID --assume_role roleName inputFileName --enabled_regions regionList  --disable_email
+   enableDetective.py --master_account administratorAccountID --assume_role roleName --input_file inputFileName --tags tagValueList --enabled_regions regionList  --disable_email
    ```
 
 When you run the script, replace the following values:
@@ -150,6 +154,14 @@ The name of the AWS role to assume in the administrator account and each member 
 
 `inputFileName`  
 The name of the `.csv` file containing the list of member accounts to add to the administrator account's behavior graphs\.
+
+`tagValueList`  
+\(Optional\) A comma\-separated list of tag values to assign to a new behavior graph\.  
+For each tag value, the format is `key=value`\. For example:  
+
+```
+--tags Department=Finance,Geo=Americas
+```
 
 `regionList`  
 \(Optional\) A comma\-separated list of Regions in which to add the member accounts to the administrator account's behavior graph\. For example:  
@@ -174,13 +186,13 @@ You can run the `disableDetective.py` script from an EC2 instance or your local 
 1. To use the `.csv` file to delete the listed member accounts from the administrator account's behavior graphs across a specified list of Regions, run the `disableDetective.py` script as follows:
 
    ```
-   disabledetective.py --master_account administratorAccountID --assume_role roleName inputFileName --disabled_regions regionList
+   disabledetective.py --master_account administratorAccountID --assume_role roleName --input_file inputFileName --disabled_regions regionList
    ```
 
 1. To disable Detective for the administrator account across all Regions, run the `disableDetective.py` script with the `--delete-master` flag\.
 
    ```
-   disabledetective.py --master_account administratorAccountID --assume_role roleName inputFileName --disabled_regions regionList --delete_master
+   disabledetective.py --master_account administratorAccountID --assume_role roleName --input_file inputFileName --disabled_regions regionList --delete_master
    ```
 
 When you run the script, replace the following values:
