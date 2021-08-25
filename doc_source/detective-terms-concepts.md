@@ -34,7 +34,7 @@ See [Viewing details for high\-volume entities](https://docs.aws.amazon.com/dete
 The process of performing triage on suspicious or interesting activity, determining the scope, getting to its underlying source or cause, and then determining how to proceed\.
 
 ****Member account****  
-An AWS account that a administrator account invited to contribute data to a behavior graph\.  
+An AWS account that an administrator account invited to contribute data to a behavior graph\.  
 Member accounts can respond to the behavior graph invitation and remove their account from the behavior graph\.  
 They can also view usage information for their account across the behavior graphs that they contribute data to\.  
 They have no other access to the behavior graph\.
