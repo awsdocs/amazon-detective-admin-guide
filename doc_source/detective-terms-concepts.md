@@ -25,6 +25,11 @@ For each entity, the source data is also used to populate entity properties\. Pr
 ****Finding****  
 A security issue detected by Amazon GuardDuty\.
 
+**Finding overview**  
+A single page that provides a summary of information about a finding\.  
+A finding overview contains the list of involved entities for the findings\. From the list, you can pivot to the profile for an entity\.  
+A finding overview also contains a details panel that contains the finding attributes\.
+
 **High\-volume entity**  
 An entity that has connections to or from a very large number of other entities during a time interval\. For example, an EC2 instance might have connections from millions of IP addresses\. The number of connections exceeds the threshold that Detective can accommodate\.  
 When the current scope time contains a high\-volume time interval, Detective notifies the user\.  
@@ -40,9 +45,9 @@ They can also view usage information for their account across the behavior graph
 They have no other access to the behavior graph\.
 
 ****Profile****  
-For a finding or an entity, a single page that provides a collection of data visualizations plus supporting guidance\.  
+A single page that provides a collection of data visualizations related to activity for an entity\.  
 For findings, profiles help analysts to determine whether the finding is of genuine concern or a false positive\.  
-For entities, profiles provide supporting details for an investigation into a finding or for a general hunt for suspicious activity\.
+Profiles provide information to support an investigation into a finding or for a general hunt for suspicious activity\.
 
 ****Profile panel****  
 A single visualization on a profile\. Each profile panel is intended to help answer a specific question or questions to assist an analyst in an investigation\.  
@@ -53,6 +58,6 @@ Activity that occurs between individual entities\. Relationships are also extrac
 Similar to an entity, a relationship has a type, which identifies the types of entities involved and the direction of the connection\. An example of a relationship type is an IP address connecting to an Amazon EC2 instance\.
 
 ****Scope time****  
-The time window that is used to scope the data displayed on finding and entity profiles\.  
-The default scope time for a finding profile reflects the first and last times when the suspicious activity was observed\.  
+The time window that is used to scope the data displayed on profiles\.  
+The default scope time for a finding reflects the first and last times when the suspicious activity was observed\.  
 The default scope time for an entity profile is the previous 24 hours\.

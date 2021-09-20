@@ -37,7 +37,5 @@ This amount is a projected cost only\. It projects the total cost for the admini
 
 **All accounts' projected cost** shows a total projected cost for 30 days of data for the entire behavior graph\. The projected cost is based on the daily average volume for each account\.
 
-Important
-
 **Important**  
 This amount is a projected cost only\. It projects the total cost for the behavior graph data for a typical 30\-day time period\. It is based on the usage from the previous 30 days\. The projected cost does not include member accounts that were removed from the behavior graph\. See [How Amazon Detective calculates projected cost](usage-projected-cost-calculation.md)\.
